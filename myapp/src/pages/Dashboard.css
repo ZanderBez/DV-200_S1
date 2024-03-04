@@ -1,9 +1,42 @@
-.content{
-    flex: 1;
-    padding-top: 20px;
-    padding-left: 55px;
-}
+/* Dashboard.css */
 
-.title{
+.title {
     text-align: center;
 }
+  
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Center vertically */
+}
+  
+.col {
+    flex: 1;
+}
+  
+.weather-name {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.weather-graph {
+    margin-top: 115px;
+    text-align: left;
+}
+  
+  
+.block1 {
+    margin-top: 50px;
+    width: 90%;
+    height: 60vh;
+    background-color: gray; 
+}
+  
+.block2 {
+    margin-top: 50px;
+    height: 50vh;
+    width: 90%;
+    background-color: black; 
+}
+  
+  
