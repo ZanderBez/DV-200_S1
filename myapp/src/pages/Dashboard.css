@@ -31,7 +31,8 @@ body{
     margin-top: 50px;
     width: 90%;
     height: 60vh;
-    background-color: gray; 
+    background-color: gray;
+    border-radius: 50px; 
 }
   
 .block2 {
@@ -39,6 +40,7 @@ body{
     height: 50vh;
     width: 90%;
     background-color: black; 
+    border-radius: 50px; 
 }
   
   
