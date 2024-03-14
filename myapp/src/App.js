@@ -9,7 +9,7 @@ import Timeline from './pages/Timeline';
 const App = () => {
   return (
     <Router>
-      <div className="container">
+      <div className="container1">
         <Navbar />
         <div className="content">
           <Routes>

@@ -1,19 +1,18 @@
-body{
-    background-color: rgb(206, 206, 206);
-}
-
 .title {
+    padding: 20px;
     text-align: center;
+    width: 100%;
 }
   
 .row {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start; /* Center vertically */
+    align-items: flex-start;
 }
   
-.col {
+.col1 {
     flex: 1;
+    padding: 0;
 }
   
 .weather-name {
@@ -42,5 +41,32 @@ body{
     background-color: black; 
     border-radius: 50px; 
 }
-  
+
+.title-info{
+    text-align: center;
+    padding: 30px 150px;
+}
+
+.title-container{
+    justify-content: center;
+}
+
+.dashboard-container{
+    display: flex;
+    padding: 0;
+}
+
+.navbar-spacer{
+    width: 400px;
+}
+
+.dashboard-content{
+    flex-grow: 1;
+}
+
+.content{
+    flex: 1;
+    padding: 0;
+}
+
   
