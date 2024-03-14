@@ -1,3 +1,4 @@
+
 .title {
     padding: 20px;
     text-align: center;
@@ -12,7 +13,7 @@
   
 .col1 {
     flex: 1;
-    padding: 0;
+    padding: 0px 0;
 }
   
 .weather-name {
@@ -23,6 +24,7 @@
 .weather-graph {
     margin-top: 115px;
     text-align: left;
+    width: auto;
 }
   
   
@@ -36,10 +38,14 @@
   
 .block2 {
     margin-top: 50px;
-    height: 50vh;
+    height: 45vh;
     width: 90%;
-    background-color: black; 
+    background-color: rgb(216, 216, 216); 
     border-radius: 50px; 
+}
+
+.LineChart{
+    padding: 50px 10px;
 }
 
 .title-info{
