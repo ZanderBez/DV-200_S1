@@ -12,14 +12,40 @@ const LineChart = () => {
                         {
                             label: 'Temperature',
                             data: [30, 40, 10, 20, 40, 17, 32],
-                            backgroundColor: ['blue', 'green', 'orange', 'red'],
+                            borderColor: 'white',
+                            backgroundColor: ['red', 'green', 'orange', 'yellow'],
                         }
                     ]
                 }}
                 height={300}
-                width={400}
+                width={200}
                 options={{
                     maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: 'white', 
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)', 
+                            },
+                        },
+                        y: {
+                            ticks: {
+                                color: 'white', 
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)', 
+                            },
+                        },
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'white', 
+                            },
+                        },
+                    },
                 }}
             />
         </div>

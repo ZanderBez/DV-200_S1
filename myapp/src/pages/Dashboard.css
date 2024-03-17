@@ -1,15 +1,10 @@
-
 .title {
     padding: 20px;
     text-align: center;
     width: 100%;
+    color: white;
 }
   
-
-.title-info{
-    text-align: center;
-    padding: 30px 150px;
-}
 
 .title-container{
     justify-content: center;
@@ -18,6 +13,8 @@
 .dashboard-container{
     display: flex;
     padding: 0;
+    background-color: rgb(31, 31, 31);
+    height: 100vh;
 }
 
 .navbar-spacer{
@@ -35,7 +32,8 @@
 
 
 .parent {
-    margin-left: 20px;
+    margin-top: 50px;
+    margin-left: 80px;
     height: 71vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -45,23 +43,34 @@
 }
     
 .div1 { 
-    background-color: black;
+    background-color: rgba(40, 72, 255, 0.37);
     height: 25vh;
     grid-area: 2 / 3 / 4 / 4; 
+    border-radius: 30px;
+    box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     
 }
 .div2 { 
     margin-left: 20px;
     margin-right: 20px;
-    background-color: black;
+    background-color: rgba(40, 72, 255, 0.37);
     grid-area: 1 / 1 / 2 / 4; 
-
+    border-radius: 30px;
+    box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
 }
 .div3 {
-    background-color: black;
-    height: 25vh;
+    margin-top: 150px;
+    background-color: rgba(40, 72, 255, 0.37);
+    height: 40vh;
     grid-area: 5 / 1 / 4 / 2; 
-
+    border-radius: 30px;
+    box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
 }
 
 .info-container{
@@ -69,4 +78,29 @@
     height: 71vh;
 }
 
+.weather-text{
+    text-align: center;
+    margin: 20px;
+    color: white;
+}
+
+.weather-title{
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+
+.drop{
+    margin-left: 85px;
+}
+
+.chart-info{
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
+.LineChart{
+    padding: 15px;
+}
   
