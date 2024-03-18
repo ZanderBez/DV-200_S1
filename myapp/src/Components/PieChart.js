@@ -1,17 +1,16 @@
 import React from "react";
 import Chart from "chart.js/auto";
-import { Line } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 
-const LineChart = () => {
+const PieChart = () => {
     return (
         <div>
-            <Line
+            <Pie
                 data={{
-                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday','Saturday','Sunday'],
+                    labels: ['UV (Low)', 'Wind Speed (MPH)', 'Humidity (g/kg)', 'Wind Change (%)'],
                     datasets: [
                         {
-                            label: 'Temperature °C',
-                            data: [30, 40, 10, 20, 40, 17, 32],
+                            data: [1, 4, 28, 25],
                             borderColor: 'white',
                             backgroundColor: [
                                 'rgb(34, 40, 49)', 
@@ -23,7 +22,7 @@ const LineChart = () => {
                     ]
                 }}
                 height={300}
-                width={200}
+                width={400}
                 options={{
                     maintainAspectRatio: false,
                     scales: {
@@ -57,4 +56,4 @@ const LineChart = () => {
     );
 }
 
-export default LineChart;
+export default PieChart;

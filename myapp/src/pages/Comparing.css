@@ -10,11 +10,11 @@
 }
 
 .navbar-spacer{
-    width: 300px;
+    width: 200px;
 }
 
 .compare-content{
-    margin-left: -36px;
+    padding-left: 55px;
     flex-grow: 1;
 }
 
@@ -47,11 +47,19 @@
     border-radius: 30px;
     background-color: #30475E;
     grid-area: 1 / 1 / 2 / 2; 
+    border: 1px solid #C1A57B;
+    box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
 }
 .div5 { 
     border-radius: 30px;
     background-color: #30475E;
     grid-area: 1 / 2 / 2 / 3; 
+    border: 1px solid #C1A57B;
+    box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
+    -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
 }
 
 .compare-col{
@@ -61,5 +69,17 @@
 }
 
 .drop-compare{
-    margin: 20px 20px;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.title-city1{
+    padding: 8px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #ECECEC;
+}
+
+.title-city1s h3{
+    font-family: "Lora", serif;
 }

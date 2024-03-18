@@ -5,7 +5,6 @@ import { FaCodeCompare } from 'react-icons/fa6';
 import { IoLogoFacebook } from 'react-icons/io5';
 import { BsTwitterX } from 'react-icons/bs';
 import './Navbar.css';
-import logo from '../Images/Frame 3.png';
 
 const Navbar = () => {
   return (

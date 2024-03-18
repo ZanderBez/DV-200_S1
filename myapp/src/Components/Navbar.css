@@ -24,9 +24,10 @@ nav{
 
 
 .sidebar p{
+    font-family: "Poppins", sans-serif;
     font-size: larger;
     color: #ECECEC;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .sidebar ul{

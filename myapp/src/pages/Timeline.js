@@ -3,19 +3,19 @@ import './Timeline.css';
 
 const Timeline = () => {
   return (
-    <div className='compare-container '>
+    <div className='timeline-container '>
       <div className='navbar-spacer'></div>
-      <div className='compare-content'>
+      <div className='timeline-content'>
       <div className='title-container'>
         <div className='title'>
         <h1>This is the TimeLine Page</h1>
       </div>
         <div className='title-info'>
-        <h4>Here you may compare cities weather to one other. </h4>
+        <h4>Here You can see the Highest Temperature of the Cities</h4>
       </div>
       </div>
-      <div className='compare-col-'>
-
+      <div className='container-timeline'>
+        <div className='timeline-chart'></div>
       </div>
       </div>
     </div>

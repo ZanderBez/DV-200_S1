@@ -3,7 +3,7 @@
     text-align: center;
     width: 100%;
     font-family: "Poppins", sans-serif;
-    color: #C1A57B;
+    color: #ECECEC;
 }
   
 
@@ -19,11 +19,12 @@
 }
 
 .navbar-spacer{
-    width: 400px;
+    width: 200px;
 }
 
 .dashboard-content{
     flex-grow: 1;
+    padding-left: 80px;
 }
 
 .content{
@@ -46,6 +47,7 @@
     background-color: #30475E;
     grid-area: 1 / 1 / 2 / 2; 
     border-radius: 30px;
+    border: 1px solid #C1A57B;
     box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
@@ -55,6 +57,7 @@
     background-color: #30475E;
     grid-area: 2 / 1 / 3 / 2; 
     border-radius: 30px;
+    border: 1px solid #C1A57B;
     box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
@@ -63,6 +66,7 @@
     background-color: #30475E;
     grid-area: 1 / 2 / 3 / 3; 
     border-radius: 30px;
+    border: 1px solid #C1A57B;
     box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
@@ -78,8 +82,8 @@
 .weather-text{
     text-align: center;
     font-family: "Lora", serif;
-    margin: 20px;
-    color: #C1A57B;
+    margin: 30px;
+    color: #ECECEC;
 }
 
 .weather-title{
@@ -87,7 +91,7 @@
     text-align: center;
     margin: 10px;
     padding-top: 20px;
-    color: #C1A57B;
+    color: #ECECEC;
 }
 
 .drop{
@@ -99,10 +103,95 @@
     font-family: "Poppins", sans-serif;
     margin: 10px;
     text-align: center;
-    color: #C1A57B;
+    color: #ECECEC;
 }
 
 .LineChart{
     padding: 15px;
 }
+
+.title-city{
+    padding: 15px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #ECECEC;
+}
+
+.title-city h3{
+    font-family: "Lora", serif;
+}
+
+.climate-info{
+    align-items: center;
+    text-align: center;
+    color: #ECECEC;
+    font-family: "Lora", serif;
+}
+
+.climate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #ECECEC;
+    font-family: "Lora", serif;
+}
+
+.climate h1{
+    color:#C1A57B ;
+}
+
+.climate-icons{
+    text-align: center;
+    color: #ECECEC;
+    font-family: "Lora", serif;
+}
+
+.climate-icons h1{
+    color:#C1A57B ;
+}
+
+.uv{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 10px); 
+}
   
+.wind{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 10px); 
+}
+
+.humidity{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 10px); 
+}
+
+.wind{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 10px); 
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-1{
+    width: 200px;
+}
+
+.PieChart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.chart-info{
+    font-family: "Lora", serif;
+}
