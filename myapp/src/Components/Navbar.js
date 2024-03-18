@@ -5,13 +5,13 @@ import { FaCodeCompare } from 'react-icons/fa6';
 import { IoLogoFacebook } from 'react-icons/io5';
 import { BsTwitterX } from 'react-icons/bs';
 import './Navbar.css';
+import logo from '../Images/Frame 3.png';
 
 const Navbar = () => {
   return (
     <nav >
       <div className='sidebar'>
         <div className='top_section'>
-          <h1 className='logo'>Logo</h1>
         </div>
         <ul>
           <Link to="/">

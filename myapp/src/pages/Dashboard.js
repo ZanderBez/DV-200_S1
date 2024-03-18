@@ -4,6 +4,7 @@ import LineChart from '../Components/LineChart';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
+
 const Dashboard = () => {
   return (
     <div className='dashboard-container '>
@@ -36,12 +37,12 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="div2">
+          <h5 className='chart-info'>Temperature For New York</h5>
+          <div className='LineChart'>
+          <LineChart />
+          </div>
         </div>
         <div className="div3">
-        <h5 className='chart-info'>Temperature For New York</h5>
-        <div className='LineChart'>
-          <LineChart />
-        </div>
         </div>
         </div>
       </div>
