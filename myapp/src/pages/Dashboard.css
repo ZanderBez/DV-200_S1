@@ -42,7 +42,7 @@
     grid-row-gap: 0px;
 }
     
-.div1 { 
+ .div1 { 
     background-color: rgba(40, 72, 255, 0.37);
     height: 25vh;
     grid-area: 2 / 3 / 4 / 4; 
@@ -71,7 +71,7 @@
     box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     -webkit-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
-}
+} 
 
 .info-container{
     width: 100%;
@@ -93,6 +93,7 @@
 .drop{
     margin-left: 85px;
 }
+
 
 .chart-info{
     margin: 10px;

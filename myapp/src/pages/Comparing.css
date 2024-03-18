@@ -5,13 +5,16 @@
 .compare-container{
     display: flex;
     padding: 0;
+    background-color: rgb(31, 31, 31);
+    height: 100vh;
 }
 
 .navbar-spacer{
-    width: 400px;
+    width: 300px;
 }
 
 .compare-content{
+    margin-left: -36px;
     flex-grow: 1;
 }
 
@@ -19,6 +22,14 @@
     padding: 20px;
     text-align: center;
     width: 100%;
+    color: white;
+}
+
+.title-info{
+    text-align: center;
+    padding: 0px 70px;
+    color: white;
+    justify-content: center;
 }
 
 .parent {
