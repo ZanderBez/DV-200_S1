@@ -2,7 +2,7 @@
     padding: 20px;
     text-align: center;
     width: 100%;
-    color: white;
+    color: #C1A57B;
 }
   
 
@@ -13,7 +13,7 @@
 .dashboard-container{
     display: flex;
     padding: 0;
-    background-color: rgb(31, 31, 31);
+    background-color: #222831;
     height: 100vh;
 }
 
@@ -43,7 +43,7 @@
 }
     
  .div1 { 
-    background-color: rgba(40, 72, 255, 0.37);
+    background-color: #30475E;
     height: 25vh;
     grid-area: 2 / 3 / 4 / 4; 
     border-radius: 30px;
@@ -55,7 +55,7 @@
 .div2 { 
     margin-left: 20px;
     margin-right: 20px;
-    background-color: rgba(40, 72, 255, 0.37);
+    background-color: #30475E;
     grid-area: 1 / 1 / 2 / 4; 
     border-radius: 30px;
     box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
@@ -64,7 +64,7 @@
 }
 .div3 {
     margin-top: 150px;
-    background-color: rgba(40, 72, 255, 0.37);
+    background-color: #30475E;
     height: 40vh;
     grid-area: 5 / 1 / 4 / 2; 
     border-radius: 30px;
@@ -81,13 +81,14 @@
 .weather-text{
     text-align: center;
     margin: 20px;
-    color: white;
+    color: #C1A57B;
 }
 
 .weather-title{
     text-align: center;
     margin: 10px;
-    color: white;
+    padding-top: 20px;
+    color: #C1A57B;
 }
 
 .drop{
@@ -98,7 +99,7 @@
 .chart-info{
     margin: 10px;
     text-align: center;
-    color: white;
+    color: #C1A57B;
 }
 
 .LineChart{
