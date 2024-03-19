@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState, useEffect } from 'react';
 import './Dashboard.css';
 import { Link } from 'react-router-dom';
 import LineChart from '../Components/LineChart';
@@ -10,10 +10,28 @@ import { WiHumidity } from "react-icons/wi";
 import { FaCloud } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import PieChart from '../Components/PieChart';
+import axios from 'axios';
 
 
 
 const Dashboard = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios.get('https://weather-comparison-api.p.rapidapi.com/compare/London,Paris,New%20York', {
+        headers: {
+            'x-rapidapi-key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
+            'x-rapidapi-host': 'weather-comparison-api.p.rapidapi.com'
+        }
+    })
+    .then(response => {
+        setData(response.data);
+    })
+    .catch(error => {
+        console.log('Error fetching data: ', error);
+    });
+  }, []);
+
   return (
     <div className='dashboard-container '>
         <div className='navbar-spacer'></div>
