@@ -26,11 +26,12 @@ const Dashboard = () => {
     })
     .then(response => {
         setData(response.data);
+        console.log(data)
     })
     .catch(error => {
         console.log('Error fetching data: ', error);
     });
-  }, []);
+  }, [data]);
 
   return (
     <div className='dashboard-container '>
