@@ -18,19 +18,25 @@ const Dashboard = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get('https://weather-comparison-api.p.rapidapi.com/compare/London,Paris,New%20York', {
+    axios
+      .get('https://weather-comparison-api.p.rapidapi.com/compare/London,Paris,New%20York', {
         headers: {
-            'x-rapidapi-key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
-            'x-rapidapi-host': 'weather-comparison-api.p.rapidapi.com'
-        }
-    })
-    .then(response => {
+          'x-rapidapi-key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
+          'x-rapidapi-host': 'weather-comparison-api.p.rapidapi.com',
+        },
+      })
+      .then(response => {
         setData(response.data);
-        console.log(data)
-    })
-    .catch(error => {
+      })
+      .catch(error => {
         console.log('Error fetching data: ', error);
-    });
+      });
+  }, []);
+
+  useEffect(() => {
+    if (data) {
+      console.log(data);
+    }
   }, [data]);
 
   return (
