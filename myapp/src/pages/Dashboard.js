@@ -16,6 +16,9 @@ import axios from 'axios';
 const Dashboard = () => {
   const [data, setData] = useState(null);
   const [apiKey, setApiKey] = useState('lat=44.34&lon=10.99');
+  const kelvinToCelsius = (kelvin) => {
+    return kelvin - 273.15;
+  };
 
   useEffect(() => {
     axios
@@ -26,7 +29,7 @@ const Dashboard = () => {
       .catch(error => {
         console.log('Error fetching data: ', error);
       });
-  }, []);
+  }, [apiKey]);
 
   useEffect(() => {
     if (data) {
@@ -34,6 +37,9 @@ const Dashboard = () => {
     }
   }, [data]);
 
+  if(!data){
+    return <h2>loading</h2>
+  }
   return (
     <div className='dashboard-container '>
         <div className='navbar-spacer'></div>
@@ -46,11 +52,10 @@ const Dashboard = () => {
       <Dropdown.Toggle  id="dropdown-basic">
         New York
       </Dropdown.Toggle>
-
       <Dropdown.Menu>
-        <Dropdown.Item value ='lat=44.34&lon=10.99'>London</Dropdown.Item>
-        <Dropdown.Item >Paris</Dropdown.Item>
-        <Dropdown.Item >Fiji</Dropdown.Item>
+      <Dropdown.Item onClick={() => setApiKey('lat=51.51&lon=-0.13')} href="#/action-1">London</Dropdown.Item> 
+        <Dropdown.Item onClick={() => setApiKey('lat=48.85&lon=2.35')} href="#/action-2">Paris</Dropdown.Item> 
+        <Dropdown.Item onClick={() => setApiKey('lat=-17.78&lon=177.43')} href="#/action-3">Fiji</Dropdown.Item> 
       </Dropdown.Menu>
     </Dropdown>
       </div>
@@ -72,43 +77,43 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="div2">
-          <h5 className='chart-info'>Temperature For New York</h5>
+          <h5 className='chart-info'>Temperature For {data.city.name}</h5>
           <div className='LineChart'>
-          <LineChart />
+          <LineChart data = {data}/>
           </div>
         </div>
         <div className="div3">
           <div className='title-city'>
-            <h2>New York</h2>
-            <h3>Weather report:</h3>
+            <h2>{data.city.name}</h2>
+            <h5>Weather report:</h5>
             </div>
             <div className='climate-info'>
-            <h2>sunny</h2>
+            <h2>{data.list[0].weather[0].main}</h2>
+            <h5>Temperature:</h5>
               <div className='climate'>
-                <h2>32 C</h2>
-                <h1><WiDaySunny /></h1>
+                <h2>{kelvinToCelsius(data.list[0].main.temp).toFixed(1)} °C</h2>
               </div>
               <div className='climate-icons'>
                <div className='wind'>
                <h1><FaWind /></h1>
-               <h4>4 MPH</h4>
-               <h5>North</h5>
+               <h4>Wind</h4>
+              <h5>{data.list[0].wind.speed} MP/H</h5>
                </div>
 
                <div className='humidity'>
                <h1><WiHumidity /></h1>
                <h4>Humidity</h4>
-               <h5>28 g/kg</h5>
+               <h5>{data.list[0].main.humidity} g/kg</h5>
                 </div>
 
               <div className='wind'>
                <h1><FaCloud /></h1>
-               <h4>Wind Change</h4>
-               <h5>25%</h5>
+               <h4>Cloudy Change</h4>
+               <h5>{data.list[0].clouds.all} %</h5>
               </div>
               </div>
             </div> 
-            <h5 className='chart-info'>Weather Report in New York:</h5>
+            <h5 className='chart-info'>Weather Report in {data.city.name}:</h5>
           <div className='PieChart'>
           <PieChart />
           </div>
