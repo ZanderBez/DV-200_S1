@@ -6,7 +6,6 @@ import { MdOutlineWbSunny } from "react-icons/md";
 import { FaWind } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
 import { FaCloud } from "react-icons/fa";
-import Button from 'react-bootstrap/Button';
 import PieChart from '../Components/PieChart';
 
 const Comparing = () => {
@@ -100,12 +99,6 @@ const Comparing = () => {
                 <h1><WiDaySunny /></h1>
               </div>
               <div className='climate-icons'>
-               <div className='uv'>
-               <h1><MdOutlineWbSunny /></h1>
-               <h4>UV 0 </h4>
-               <h5>Low</h5>
-               </div>
-
                <div className='wind'>
                <h1><FaWind /></h1>
                <h4>12 MPH</h4>

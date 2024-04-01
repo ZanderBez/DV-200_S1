@@ -7,10 +7,10 @@ const PieChart = () => {
         <div>
             <Pie
                 data={{
-                    labels: ['UV (Low)', 'Wind Speed (MPH)', 'Humidity (g/kg)', 'Wind Change (%)'],
+                    labels: [ 'Wind Speed (MPH)', 'Humidity (g/kg)', 'Wind Change (%)'],
                     datasets: [
                         {
-                            data: [1, 4, 28, 25],
+                            data: [4, 28, 25],
                             borderColor: 'white',
                             backgroundColor: [
                                 'rgb(34, 40, 49)', 

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import LineChart from '../Components/LineChart';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { WiDaySunny } from "react-icons/wi";
-import { MdOutlineWbSunny } from "react-icons/md";
 import { FaWind } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
 import { FaCloud } from "react-icons/fa";
@@ -15,29 +14,25 @@ import axios from 'axios';
 
 
 const Dashboard = () => {
-  // const [data, setData] = useState(null);
+  const [data, setData] = useState(null);
+  const [apiKey, setApiKey] = useState('lat=44.34&lon=10.99');
 
-  // useEffect(() => {
-  //   axios
-  //     .get('https://weather-comparison-api.p.rapidapi.com/compare/London,Paris,New%20York', {
-  //       headers: {
-  //         'x-rapidapi-key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
-  //         'x-rapidapi-host': 'weather-comparison-api.p.rapidapi.com',
-  //       },
-  //     })
-  //     .then(response => {
-  //       setData(response.data);
-  //     })
-  //     .catch(error => {
-  //       console.log('Error fetching data: ', error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(`https://api.openweathermap.org/data/2.5/forecast?${apiKey}&appid=5b41cb56e5c0fa510a161726514c5cf3`)
+      .then(response => {
+        setData(response.data);
+      })
+      .catch(error => {
+        console.log('Error fetching data: ', error);
+      });
+  }, []);
 
-  // useEffect(() => {
-  //   if (data) {
-  //     console.log(data);
-  //   }
-  // }, [data]);
+  useEffect(() => {
+    if (data) {
+      console.log(data);
+    }
+  }, [data]);
 
   return (
     <div className='dashboard-container '>
@@ -53,9 +48,9 @@ const Dashboard = () => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">London</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Paris</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Fiji</Dropdown.Item>
+        <Dropdown.Item value ='lat=44.34&lon=10.99'>London</Dropdown.Item>
+        <Dropdown.Item >Paris</Dropdown.Item>
+        <Dropdown.Item >Fiji</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
       </div>
@@ -94,12 +89,6 @@ const Dashboard = () => {
                 <h1><WiDaySunny /></h1>
               </div>
               <div className='climate-icons'>
-               <div className='uv'>
-               <h1><MdOutlineWbSunny /></h1>
-               <h4>UV 1 </h4>
-               <h5>Low</h5>
-               </div>
-
                <div className='wind'>
                <h1><FaWind /></h1>
                <h4>4 MPH</h4>
