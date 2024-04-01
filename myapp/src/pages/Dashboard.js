@@ -15,29 +15,29 @@ import axios from 'axios';
 
 
 const Dashboard = () => {
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
-  useEffect(() => {
-    axios
-      .get('https://weather-comparison-api.p.rapidapi.com/compare/London,Paris,New%20York', {
-        headers: {
-          'x-rapidapi-key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
-          'x-rapidapi-host': 'weather-comparison-api.p.rapidapi.com',
-        },
-      })
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => {
-        console.log('Error fetching data: ', error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get('https://weather-comparison-api.p.rapidapi.com/compare/London,Paris,New%20York', {
+  //       headers: {
+  //         'x-rapidapi-key': '8896e86008mshcdb4da5dde0a9cap1333cejsna708d8bd7d91',
+  //         'x-rapidapi-host': 'weather-comparison-api.p.rapidapi.com',
+  //       },
+  //     })
+  //     .then(response => {
+  //       setData(response.data);
+  //     })
+  //     .catch(error => {
+  //       console.log('Error fetching data: ', error);
+  //     });
+  // }, []);
 
-  useEffect(() => {
-    if (data) {
-      console.log(data);
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data) {
+  //     console.log(data);
+  //   }
+  // }, [data]);
 
   return (
     <div className='dashboard-container '>
@@ -88,7 +88,7 @@ const Dashboard = () => {
             <h3>Weather report:</h3>
             </div>
             <div className='climate-info'>
-            <h2>Sunny</h2>
+            <h2>sunny</h2>
               <div className='climate'>
                 <h2>32 C</h2>
                 <h1><WiDaySunny /></h1>

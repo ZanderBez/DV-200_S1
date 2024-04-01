@@ -80,7 +80,7 @@ const Comparing = () => {
       <div className="div5">
       <Dropdown className='drop-compare'>
       <Dropdown.Toggle  id="dropdown-basic">
-        New York
+        London
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
