@@ -80,6 +80,12 @@ const Timeline = () => {
         <div className='title'>
         <h1>This is the TimeLine Page</h1>
       </div>
+        <div className='title-info'>
+        <h4>Here You can see the Highest Temperature of the Cities</h4>
+      </div>
+      </div>
+      <div className='container-timeline'>
+      <h2>New York</h2>
       <Dropdown className='drop'>
       <Dropdown.Toggle  id="dropdown-basic">
         New York
@@ -91,12 +97,6 @@ const Timeline = () => {
         <Dropdown.Item href="#/action-3">Fiji</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
-        <div className='title-info'>
-        <h4>Here You can see the Highest Temperature of the Cities</h4>
-      </div>
-      </div>
-      <div className='container-timeline'>
-      <h2>New York</h2>
         <div className='timeline-chart'>
           
           <Line
