@@ -41,7 +41,7 @@ const Dashboard = () => {
   };
 
   if (!data) {
-    return <h2>loading</h2>;
+    return <h2 className='load'>loading</h2>;
   }
 
   return (

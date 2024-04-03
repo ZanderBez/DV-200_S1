@@ -14,7 +14,9 @@
 .dashboard-container{
     display: flex;
     padding: 0;
-    background-color: #222831;
+    background: url('../Images/beautiful-view-sky-sunset-beach.jpg');
+    background-size: cover;
+    background-position: center;
     height: 100vh;
 }
 
@@ -23,6 +25,7 @@
 }
 
 .dashboard-content{
+    background-color: rgba(97, 97, 97, 0.37);
     flex-grow: 1;
     padding-left: 80px;
 }
@@ -30,6 +33,10 @@
 .content{
     flex: 1;
     padding: 0;
+}
+
+.load{
+    text-align: center;
 }
 
 

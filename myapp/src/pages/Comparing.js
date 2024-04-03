@@ -43,7 +43,6 @@ const Comparing = () => {
             <h2>Sunny</h2>
               <div className='climate'>
                 <h2>32 C</h2>
-                <h1><WiDaySunny /></h1>
               </div>
               <div className='climate-icons'>
                <div className='uv'>
@@ -96,7 +95,6 @@ const Comparing = () => {
             <h2>Cloudy</h2>
               <div className='climate'>
                 <h2>32 C</h2>
-                <h1><WiDaySunny /></h1>
               </div>
               <div className='climate-icons'>
                <div className='wind'>

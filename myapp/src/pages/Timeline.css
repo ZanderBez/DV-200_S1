@@ -13,7 +13,7 @@
 .container-timeline h2{
     text-align: center;
     padding-top: 5px;
-    color: white;
+    color: #C1A57B;
     font-family: "Poppins", sans-serif;
 }
 
@@ -24,9 +24,10 @@
 .timeline-container{
     width: 100%;
     display: flex;
-    background-color: #222831;
+    background: url('../Images/beautiful-view-sky-sunset-beach.jpg');
+    background-size: cover;
+    background-position: center;
     height: 100vh;
-    padding: 0 80px;
 }
 
 .navbar-spacer{
@@ -34,7 +35,9 @@
 }
 
 .timeline-content{
+    background-color: rgba(97, 97, 97, 0.37);
     flex-grow: 1;
+    padding: 5px 80px;
 }
 
 .timeline-chart{
@@ -44,4 +47,8 @@
     align-items: center;
     justify-content: center;
     display: flex;
+}
+
+.load{
+    text-align: center;
 }

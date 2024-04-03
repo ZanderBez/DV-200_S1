@@ -5,7 +5,9 @@
 .compare-container{
     display: flex;
     padding: 0;
-    background-color: #222831;
+    background: url('../Images/beautiful-view-sky-sunset-beach.jpg');
+    background-size: cover;
+    background-position: center;
     height: 100vh;
 }
 
@@ -14,6 +16,7 @@
 }
 
 .compare-content{
+    background-color: rgba(97, 97, 97, 0.37);
     padding-left: 55px;
     flex-grow: 1;
 }
@@ -30,7 +33,7 @@
     font-family: "Lora", serif;
     text-align: center;
     padding: 0px 70px;
-    color: #C1A57B;
+    color: white;
     justify-content: center;
 }
 
@@ -80,6 +83,11 @@
     color: #ECECEC;
 }
 
-.title-city1s h3{
+.title-city1 h3{
     font-family: "Lora", serif;
+    color: #C1A57B;
+}
+
+.load{
+    text-align: center;
 }
