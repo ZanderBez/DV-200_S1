@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
 import { Link } from 'react-router-dom';
-import LineChart from '../Components/LineChart';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { FaWind } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
@@ -9,6 +8,7 @@ import { FaCloud } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
 import PieChart from '../Components/PieChart';
 import axios from 'axios';
+import BarChart from '../Components/LineChart';
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
@@ -69,6 +69,11 @@ const Dashboard = () => {
               <Dropdown.Item onClick={() => handleCityClick('Dallas Texas', 'lat=32.767536079427025&lon=-96.79270510147545')}>Dallas Texas</Dropdown.Item>
               <Dropdown.Item onClick={() => handleCityClick('Rome', 'lat=41.888963694963444&lon=12.488638967239984')}>Rome</Dropdown.Item>
               <Dropdown.Item onClick={() => handleCityClick('Cape Town', 'lat=-33.929314551840505&lon=18.423865445335082')}>Cape Town</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleCityClick('Berlin', 'lat=52.51559105015214&lon=13.43098253904531')}>Berlin</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleCityClick('Dubai', 'lat=25.18540097797315&lon=55.300330413199596')}>Dubai</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleCityClick('Pretoria', 'lat=-25.75854076903342&lon=28.19133059078887')}>Pretoria</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleCityClick('Johannesburg', 'lat=-26.21282029205617&lon=28.031119545737546')}>Johannesburg</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleCityClick('Los Angeles', 'lat=34.05487382491925&lon=-118.24390023246544')}>Los Angeles</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
@@ -92,7 +97,7 @@ const Dashboard = () => {
             <div className="div2">
               <h5 className='chart-info'>Temperature For {data.city.name}</h5>
               <div className='LineChart'>
-                <LineChart data={data} />
+                <BarChart data={data} />
               </div>
             </div>
             <div className="div3">

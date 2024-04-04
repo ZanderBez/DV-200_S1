@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
-const LineChart = (data) => {
+const BarChart = (data) => {
     console.log(data)
-    const lineData = data.data
+    const BarData = data.data
     const [newLabel, setNewLabel ] = useState([])
     const [newTemp, setNewTemp ] = useState([])
 
     useEffect(() => {
-        if (lineData && lineData.list && lineData.list.length > 0) {
+        if (BarData && BarData.list && BarData.list.length > 0) {
             let lastLoggedDay = null;
             const temperatures = [];
             const labels = [];
 
-            lineData.list.forEach((item) => {
+            BarData.list.forEach((item) => {
                 const currentDate = new Date(item.dt_txt);
                 const currentDay = currentDate.getDate();
 
@@ -28,11 +28,11 @@ const LineChart = (data) => {
             setNewTemp(temperatures);
             setNewLabel(labels);
         }
-    }, [lineData]);
+    }, [BarData]);
 
     return (
         <div>
-            <Line
+            <Bar
                 data={{
                     labels: newLabel,
                     datasets: [
@@ -41,10 +41,7 @@ const LineChart = (data) => {
                             data: newTemp,
                             borderColor: 'white',
                             backgroundColor: [
-                                'rgb(34, 40, 49)', 
-                                'rgb(60, 90, 94)', 
                                 'rgb(193, 165, 123)', 
-                                'rgb(236, 236, 236)',
                              ],
                         }
                     ]
@@ -84,4 +81,4 @@ const LineChart = (data) => {
     );
 }
 
-export default LineChart;
+export default BarChart;

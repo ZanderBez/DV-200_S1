@@ -77,7 +77,6 @@
 }
 
 .title-city1{
-    padding: 8px;
     text-align: center;
     font-family: "Poppins", sans-serif;
     color: #ECECEC;
@@ -90,4 +89,9 @@
 
 .load{
     text-align: center;
+}
+
+.drop1{
+    margin-left: 25px;
+    margin-top: 8px;
 }
