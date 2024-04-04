@@ -23,6 +23,7 @@ const Dashboard = () => {
       .get(`https://api.openweathermap.org/data/2.5/forecast?${apiKey}&appid=5b41cb56e5c0fa510a161726514c5cf3`)
       .then(response => {
         setData(response.data);
+        console.log(response.data); // Check the data structure here
       })
       .catch(error => {
         console.log('Error fetching data: ', error);
@@ -41,7 +42,7 @@ const Dashboard = () => {
   };
 
   if (!data) {
-    return <h2 className='load'>loading</h2>;
+    return <h1 className='load'>Loading...</h1>;
   }
 
   return (
@@ -50,7 +51,7 @@ const Dashboard = () => {
       <div className='dashboard-content'>
         <div className='title-container'>
           <div className='title'>
-            <h1>This is the Dashboard</h1>
+            <h1>DASHBOARD</h1>
           </div>
           <Dropdown className='drop'>
             <Dropdown.Toggle id="dropdown-basic">
@@ -133,7 +134,7 @@ const Dashboard = () => {
               </div>
               <h5 className='chart-info'>Weather Report in {data.city.name}:</h5>
               <div className='PieChart'>
-                <PieChart />
+                <PieChart data={data}/>
               </div>
             </div>
           </div>

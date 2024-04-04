@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
-import { Bar } from 'react-chartjs-2';
+import { Radar } from 'react-chartjs-2';
 
-const BarChart = (data) => {
+const RadarChart = (data) => {
     console.log(data)
-    const LineData = data.data
+    const RadarData = data.data
     const [newLabel, setNewLabel ] = useState([])
     const [newTemp, setNewTemp ] = useState([])
 
     useEffect(() => {
-        if (LineData && LineData.list && LineData.list.length > 0) {
+        if (RadarData && RadarData.list && RadarData.list.length > 0) {
             let lastLoggedDay = null;
             const temperatures = [];
             const labels = [];
 
-            LineData.list.forEach((item) => {
+            RadarData.list.forEach((item) => {
                 const currentDate = new Date(item.dt_txt);
                 const currentDay = currentDate.getDate();
 
@@ -28,11 +28,10 @@ const BarChart = (data) => {
             setNewTemp(temperatures);
             setNewLabel(labels);
         }
-    }, [LineData]);
-
+    }, [RadarData]);
     return (
         <div>
-            <Bar
+            <Radar
                 data={{
                     labels: newLabel,
                     datasets: [
@@ -81,4 +80,4 @@ const BarChart = (data) => {
     );
 }
 
-export default BarChart;
+export default RadarChart;

@@ -36,7 +36,7 @@ const Timeline = () => {
   };
 
   if (!data) {
-    return <h2 className='load'>loading</h2>;
+    return <h1 className='load'>Loading...</h1>;
   }
 
   return (
@@ -45,7 +45,7 @@ const Timeline = () => {
       <div className='timeline-content'>
       <div className='title-container'>
         <div className='title'>
-        <h1>This is the TimeLine Page</h1>
+        <h1>TIMELINE PAGE</h1>
       </div>
         <div className='title-info'>
         <h4>Here You can see the Temperature of the Cities for Up to days</h4>

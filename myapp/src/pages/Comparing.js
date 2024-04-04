@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Comparing.css';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { MdOutlineWbSunny } from "react-icons/md";
 import { FaWind } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
 import { FaCloud } from "react-icons/fa";
@@ -47,7 +46,7 @@ const Comparing = () => {
   };
 
   if (!data1 || !data2) {
-    return <h2 className='load'>loading</h2>;
+    return <h1 className='load'>Loading...</h1>;
   }
 
   return (
@@ -56,7 +55,7 @@ const Comparing = () => {
       <div className='compare-content'>
       <div className='title-container'>
         <div className='title'>
-        <h1>This is the Comparing Page</h1>
+        <h1>COMPARING PAGE</h1>
       </div>
         <div className='title-info'>
         <h4>Here you may compare cities weather to one other. </h4>
@@ -65,7 +64,8 @@ const Comparing = () => {
       <div className='compare-col'>
       <div className="parent1">
       <div className="div4">
-      <Dropdown className='drop1'>
+        <div className='drop1'>
+      <Dropdown className='dropdown'>
             <Dropdown.Toggle id="dropdown-basic1">
             {city1.name}
             </Dropdown.Toggle>
@@ -89,6 +89,17 @@ const Comparing = () => {
               <Dropdown.Item onClick={() => handleCity1Click('Los Angeles', 'lat=34.05487382491925&lon=-118.24390023246544')}>Los Angeles</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+          <Dropdown className='dropdown'>
+            <Dropdown.Toggle id="dropdown-basic1">
+            Graphs
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item >Pie Graph</Dropdown.Item>
+              <Dropdown.Item >Bar Graph</Dropdown.Item>
+              <Dropdown.Item >Radar Graph</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          </div>
             <div className='title-city1'>
               <h2>{city1.name}</h2>
               <h5>Weather report:</h5>
@@ -125,7 +136,8 @@ const Comparing = () => {
           </div>
       </div>
       <div className="div5">
-      <Dropdown className='drop1'>
+      <div className='drop1'>
+      <Dropdown className='dropdown'>
             <Dropdown.Toggle id="dropdown-basic2">
             {city2.name}
             </Dropdown.Toggle>
@@ -149,6 +161,17 @@ const Comparing = () => {
               <Dropdown.Item onClick={() => handleCity2Click('Los Angeles', 'lat=34.05487382491925&lon=-118.24390023246544')}>Los Angeles</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+          <Dropdown className='dropdown'>
+            <Dropdown.Toggle id="dropdown-basic1">
+            Graphs
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item >Pie Graph</Dropdown.Item>
+              <Dropdown.Item >Bar Graph</Dropdown.Item>
+              <Dropdown.Item >Radar Graph</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          </div>
     <div className='title-city1'>
               <h2>{city2.name}</h2>
               <h5>Weather report:</h5>

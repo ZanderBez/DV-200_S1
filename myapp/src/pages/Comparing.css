@@ -89,9 +89,17 @@
 
 .load{
     text-align: center;
+    font-family: "Lora", serif;
 }
 
 .drop1{
     margin-left: 25px;
     margin-top: 8px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown{
+    margin-right: 20px;
 }

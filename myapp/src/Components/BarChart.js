@@ -4,17 +4,17 @@ import { Bar } from 'react-chartjs-2';
 
 const BarChart = (data) => {
     console.log(data)
-    const LineData = data.data
+    const BarData = data.data
     const [newLabel, setNewLabel ] = useState([])
     const [newTemp, setNewTemp ] = useState([])
 
     useEffect(() => {
-        if (LineData && LineData.list && LineData.list.length > 0) {
+        if (BarData && BarData.list && BarData.list.length > 0) {
             let lastLoggedDay = null;
             const temperatures = [];
             const labels = [];
 
-            LineData.list.forEach((item) => {
+            BarData.list.forEach((item) => {
                 const currentDate = new Date(item.dt_txt);
                 const currentDay = currentDate.getDate();
 
@@ -28,8 +28,8 @@ const BarChart = (data) => {
             setNewTemp(temperatures);
             setNewLabel(labels);
         }
-    }, [LineData]);
-
+    }, [BarData]);
+    
     return (
         <div>
             <Bar

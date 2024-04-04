@@ -32,15 +32,15 @@ const Navbar = () => {
         <div className='bottom_section'>
           <ul className='social_icons'>
             
-              <a href='#'>
+              <a href='https://www.instagram.com/openwindowinstitute/?hl=en'>
                 <FaInstagram />
               </a>
             
-              <a href='#'>
+              <a href='https://twitter.com/open_window_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'>
                 <BsTwitterX />
               </a>
             
-              <a href='#'>
+              <a href='https://www.facebook.com/theopenwindow/'>
                 <IoLogoFacebook />
               </a>
             
