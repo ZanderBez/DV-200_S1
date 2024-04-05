@@ -26,7 +26,6 @@ const PieChart = ({ data }) => {
                         datasets: [
                             {
                                 data: pieData,
-                                borderColor: 'white',
                                 backgroundColor: [
                                     'rgb(34, 40, 49)',
                                     'rgb(60, 90, 94)',

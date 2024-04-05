@@ -132,7 +132,7 @@ const Comparing = () => {
             </div> 
             <h5 className='chart-info'>Weather Report in {city1.name}:</h5>
           <div className='PieChart'>
-          <PieChart />
+          <PieChart data={data1}/>
           </div>
       </div>
       <div className="div5">
@@ -204,7 +204,7 @@ const Comparing = () => {
             </div> 
             <h5 className='chart-info'>Weather Report in {city2.name}:</h5>
           <div className='PieChart'>
-          <PieChart />
+          <PieChart data={data2}/>
           </div>
       </div>
       </div>

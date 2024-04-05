@@ -41,7 +41,8 @@ const BarChart = (data) => {
                             data: newTemp,
                             borderColor: 'white',
                             backgroundColor: [
-                                'rgb(193, 165, 123)', 
+                                'rgb(193, 165, 123)',
+                                'rgb(60, 90, 94)', 
                              ],
                         }
                     ]
