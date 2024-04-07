@@ -32,10 +32,10 @@ const RadarChart = ({ data }) => {
                             {   label: 'Report',
                                 data: radarData,
                                 backgroundColor: [
-                                    'rgb(60, 90, 94)',
-                                    'rgb(34, 40, 49)',
-                                    'rgb(193, 165, 123)',
-                                    'rgb(236, 236, 236)',
+                                    'rgba(60, 90, 94, 0.8)',
+                                    'rgba(34, 40, 49, 0.8)',
+                                    'rgba(193, 165, 123, 0.8)',
+                                    'rgba(236, 236, 236, 0.8)',
                                 ],
                             }
                         ]

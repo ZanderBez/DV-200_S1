@@ -180,7 +180,7 @@ const Comparing = () => {
           </Dropdown>
           <Dropdown className='dropdown'>
             <Dropdown.Toggle id="dropdown-basic1">
-            {selectedChart === 'Pie' ? 'Pie Graph' : selectedChart === 'Bar' ? 'Bar Graph' : 'Radar Graph'}
+            {selectedChart1 === 'Pie' ? 'Pie Graph' : selectedChart1 === 'Bar' ? 'Bar Graph' : 'Radar Graph'}
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item onClick={() => handleChart1TypeSelect('Pie')}>Pie Graph</Dropdown.Item>

@@ -9,9 +9,6 @@ const Timeline = () => {
   const [data, setData] = useState(null);
   const [selectedCity, setSelectedCity] = useState('New York');
   const [apiKey, setApiKey] = useState('lat=40.7111506585508&lon=-74.00669153398084');
-  const kelvinToCelsius = (kelvin) => {
-    return kelvin - 273.15;
-  };
 
   useEffect(() => {
     axios

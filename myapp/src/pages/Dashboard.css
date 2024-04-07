@@ -201,7 +201,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: #ECECEC;
+    background-color: rgb(60, 90, 94);
 }
 
 .custom-loader {

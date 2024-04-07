@@ -5,7 +5,6 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { FaWind } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
 import { FaCloud } from "react-icons/fa";
-import Button from 'react-bootstrap/Button';
 import DoughnutChart from '../Components/DoughnutChart';
 import axios from 'axios';
 import BarChart from '../Components/LineChart';
