@@ -1,4 +1,4 @@
-![WeatherTrackerLogo](../DV-200_S1/myapp/src/Images/Frame%203.png)
+![WeatherTrackerLogo](/Assets/Frame%203.png)
 
 
 ## Table of Contents
@@ -19,14 +19,14 @@ Discover accurate weather forecasts anytime, anywhere with Weather Tracker. Our 
 
 ### Home
 
-![WeatherTrackerLogo](../DV-200_S1/myapp/src/Images/Weather%20tracker%20mock%20Ups.png)
+![WeatherTrackerLogo](/Assets/Weather%20tracker%20mock%20Ups.png)
 
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
  Remember to install all dependencies
-
+-
 ### Installing
 
 1. Clone the repo
