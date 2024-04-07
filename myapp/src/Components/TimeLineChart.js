@@ -39,7 +39,7 @@ const TimeChart = (data) => {
                         {
                             label: 'Temperature °C',
                             data: newTemp,
-                            backgroundColor: 'aqua',
+                            backgroundColor: 'white',
                             borderColor: 'rgb(193, 165, 123)',
                             tension: '0.4'
                         }

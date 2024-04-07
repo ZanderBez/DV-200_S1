@@ -44,9 +44,13 @@ const Timeline = () => {
       <div className='navbar-spacer'></div>
       <div className='timeline-content'>
       <div className='title-container'>
-        <div className='title'>
-        <h1>TIMELINE PAGE</h1>
-      </div>
+      <div class="wrapper">
+            <svg>
+              <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                TIMELINE
+              </text>
+            </svg>
+          </div>
         <div className='title-info'>
         <h4>Here You can see the Temperature of the Cities for Up to days</h4>
       </div>

@@ -1,81 +1,74 @@
 import React, { useEffect, useState } from "react";
-import Chart from "chart.js/auto";
 import { Radar } from 'react-chartjs-2';
+import Chart from "chart.js/auto";
 
-const RadarChart = (data) => {
-    console.log(data)
-    const RadarData = data.data
-    const [newLabel, setNewLabel ] = useState([])
-    const [newTemp, setNewTemp ] = useState([])
+const RadarChart = ({ data }) => {
+    const [radarData, setRadarData] = useState(null);
+
+    const kelvinToCelsius = (kelvin) => {
+        return kelvin - 273.15;
+      };
 
     useEffect(() => {
-        if (RadarData && RadarData.list && RadarData.list.length > 0) {
-            let lastLoggedDay = null;
-            const temperatures = [];
-            const labels = [];
+        if (data) {
+            const newData = [
+                kelvinToCelsius(data.list[0].main.temp).toFixed(1),
+                data.list[0].wind.speed,
+                data.list[0].main.humidity,
+                data.list[0].clouds.all
+            ];
 
-            RadarData.list.forEach((item) => {
-                const currentDate = new Date(item.dt_txt);
-                const currentDay = currentDate.getDate();
-
-                if (lastLoggedDay !== currentDay) {
-                    labels.push(currentDate.toDateString()); 
-                    temperatures.push(item.main.temp - 273.15); 
-                    lastLoggedDay = currentDay; 
-                }
-            });
-
-            setNewTemp(temperatures);
-            setNewLabel(labels);
+            setRadarData(newData);
         }
-    }, [RadarData]);
+    }, [data]);
+
     return (
         <div>
-            <Radar
-                data={{
-                    labels: newLabel,
-                    datasets: [
-                        {
-                            label: 'Temperature °C',
-                            data: newTemp,
-                            borderColor: 'white',
-                            backgroundColor: [
-                                'rgb(193, 165, 123)', 
-                             ],
-                        }
-                    ]
-                }}
-                height={300}
-                width={200}
-                options={{
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: {
-                            ticks: {
-                                color: 'white', 
-                            },
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.1)', 
-                            },
-                        },
-                        y: {
-                            ticks: {
-                                color: 'white', 
-                            },
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.1)', 
+            {radarData ? (
+                <Radar
+                    data={{
+                        labels: ['Temperature °C','Wind Speed (MPH)', 'Humidity (g/kg)', 'Wind Change (%)'],
+                        datasets: [
+                            {   label: 'Report',
+                                data: radarData,
+                                backgroundColor: [
+                                    'rgb(60, 90, 94)',
+                                    'rgb(34, 40, 49)',
+                                    'rgb(193, 165, 123)',
+                                    'rgb(236, 236, 236)',
+                                ],
+                            }
+                        ]
+                    }}
+                    height={300}
+                    width={400}
+                    options={{
+                        maintainAspectRatio: false,
+                        scales: {
+                           r: {
+                                ticks: {
+                                    color: 'white',
+                                },
+                                angleLines: {
+                                    color: 'rgb(193, 165, 123)',
+                                },
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.5)',
+                                },
                             },
                         },
-                    },
-                    plugins: {
-                        legend: {
-                            labels: {
-                                color: 'white', 
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: 'white',
+                                },
                             },
                         },
-                    },
-                }}
-            />
+                    }}
+                />
+            ) : (
+                <h1>Loading...</h1>
+            )}
         </div>
     );
 }

@@ -48,7 +48,7 @@ const BarChart = (data) => {
                     ]
                 }}
                 height={300}
-                width={200}
+                width={700}
                 options={{
                     maintainAspectRatio: false,
                     scales: {

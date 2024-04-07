@@ -23,7 +23,7 @@ const Dashboard = () => {
       .get(`https://api.openweathermap.org/data/2.5/forecast?${apiKey}&appid=5b41cb56e5c0fa510a161726514c5cf3`)
       .then(response => {
         setData(response.data);
-        console.log(response.data); // Check the data structure here
+        console.log(response.data);
       })
       .catch(error => {
         console.log('Error fetching data: ', error);
@@ -50,8 +50,12 @@ const Dashboard = () => {
       <div className='navbar-spacer'></div>
       <div className='dashboard-content'>
         <div className='title-container'>
-          <div className='title'>
-            <h1>DASHBOARD</h1>
+          <div class="wrapper">
+            <svg>
+              <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                DASHBOARD
+              </text>
+            </svg>
           </div>
           <Dropdown className='drop'>
             <Dropdown.Toggle id="dropdown-basic">

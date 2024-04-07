@@ -5,11 +5,15 @@ import { FaWind } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
 import { FaCloud } from "react-icons/fa";
 import PieChart from '../Components/PieChart';
+import RadarChart from '../Components/RadarCharts';
+import BarChart from '../Components/BarChart';
 import axios from 'axios';
 
 const Comparing = () => {
   const [data1, setData1] = useState(null);
-  const [data2, setData2] = useState(null); 
+  const [data2, setData2] = useState(null);
+  const [selectedChart, setSelectedChart] = useState('Pie');
+  const [selectedChart1, setSelectedChart1] = useState('Pie');
 
   const [city1, setCity1] = useState({ name: 'New York', apiKey: 'lat=40.7111506585508&lon=-74.00669153398084' });
   const [city2, setCity2] = useState({ name: 'London', apiKey: 'lat=51.51&lon=-0.13' });
@@ -45,6 +49,13 @@ const Comparing = () => {
     setCity2({ name: cityName, apiKey: apiCoordinates });
   };
 
+  const handleChartTypeSelect = (chartType) => {
+    setSelectedChart(chartType);
+  };
+  const handleChart1TypeSelect = (chartType) => {
+    setSelectedChart1(chartType);
+  };
+
   if (!data1 || !data2) {
     return <h1 className='load'>Loading...</h1>;
   }
@@ -54,9 +65,13 @@ const Comparing = () => {
       <div className='navbar-spacer'></div>
       <div className='compare-content'>
       <div className='title-container'>
-        <div className='title'>
-        <h1>COMPARING PAGE</h1>
-      </div>
+      <div class="wrapper">
+            <svg>
+              <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                COMPARE
+              </text>
+            </svg>
+          </div>
         <div className='title-info'>
         <h4>Here you may compare cities weather to one other. </h4>
       </div>
@@ -91,18 +106,18 @@ const Comparing = () => {
           </Dropdown>
           <Dropdown className='dropdown'>
             <Dropdown.Toggle id="dropdown-basic1">
-            Graphs
+            {selectedChart === 'Pie' ? 'Pie Graph' : selectedChart === 'Bar' ? 'Bar Graph' : 'Radar Graph'}
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item >Pie Graph</Dropdown.Item>
-              <Dropdown.Item >Bar Graph</Dropdown.Item>
-              <Dropdown.Item >Radar Graph</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleChartTypeSelect('Pie')}>Pie Graph</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleChartTypeSelect('Bar')}>Bar Graph</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleChartTypeSelect('Radar')}>Radar Graph</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           </div>
             <div className='title-city1'>
               <h2>{city1.name}</h2>
-              <h5>Weather report:</h5>
+              <h5>Weather report for today</h5>
             </div>
             <div className='climate-info'>
             <h2>{data1.list[0].weather[0].main}</h2>
@@ -132,7 +147,9 @@ const Comparing = () => {
             </div> 
             <h5 className='chart-info'>Weather Report in {city1.name}:</h5>
           <div className='PieChart'>
-          <PieChart data={data1}/>
+            {selectedChart === 'Pie' && <PieChart data={data1} />}
+            {selectedChart === 'Bar' && <BarChart data={data1} />}
+            {selectedChart === 'Radar' && <RadarChart data={data1} />}
           </div>
       </div>
       <div className="div5">
@@ -163,18 +180,18 @@ const Comparing = () => {
           </Dropdown>
           <Dropdown className='dropdown'>
             <Dropdown.Toggle id="dropdown-basic1">
-            Graphs
+            {selectedChart === 'Pie' ? 'Pie Graph' : selectedChart === 'Bar' ? 'Bar Graph' : 'Radar Graph'}
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item >Pie Graph</Dropdown.Item>
-              <Dropdown.Item >Bar Graph</Dropdown.Item>
-              <Dropdown.Item >Radar Graph</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleChart1TypeSelect('Pie')}>Pie Graph</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleChart1TypeSelect('Bar')}>Bar Graph</Dropdown.Item>
+              <Dropdown.Item onClick={() => handleChart1TypeSelect('Radar')}>Radar Graph</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           </div>
     <div className='title-city1'>
               <h2>{city2.name}</h2>
-              <h5>Weather report:</h5>
+              <h5>Weather report for today:</h5>
             </div>
             <div className='climate-info'>
             <h2>{data2.list[0].weather[0].main}</h2>
@@ -204,7 +221,9 @@ const Comparing = () => {
             </div> 
             <h5 className='chart-info'>Weather Report in {city2.name}:</h5>
           <div className='PieChart'>
-          <PieChart data={data2}/>
+            {selectedChart1 === 'Pie' && <PieChart data={data2} />}
+            {selectedChart1 === 'Bar' && <BarChart data={data2} />}
+            {selectedChart1 === 'Radar' && <RadarChart data={data2} />}
           </div>
       </div>
       </div>

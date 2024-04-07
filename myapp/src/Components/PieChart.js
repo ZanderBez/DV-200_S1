@@ -5,9 +5,14 @@ import Chart from "chart.js/auto";
 const PieChart = ({ data }) => {
     const [pieData, setPieData] = useState(null);
 
+    const kelvinToCelsius = (kelvin) => {
+        return kelvin - 273.15;
+      };
+
     useEffect(() => {
         if (data) {
             const newData = [
+                kelvinToCelsius(data.list[0].main.temp).toFixed(1),
                 data.list[0].wind.speed,
                 data.list[0].main.humidity,
                 data.list[0].clouds.all
@@ -22,7 +27,7 @@ const PieChart = ({ data }) => {
             {pieData ? (
                 <Pie
                     data={{
-                        labels: ['Wind Speed (MPH)', 'Humidity (g/kg)', 'Wind Change (%)'],
+                        labels: ['Temperature °C','Wind Speed (MPH)', 'Humidity (g/kg)', 'Wind Change (%)'],
                         datasets: [
                             {
                                 data: pieData,
@@ -39,24 +44,6 @@ const PieChart = ({ data }) => {
                     width={400}
                     options={{
                         maintainAspectRatio: false,
-                        scales: {
-                            x: {
-                                ticks: {
-                                    color: 'white',
-                                },
-                                grid: {
-                                    color: 'rgba(255, 255, 255, 0.1)',
-                                },
-                            },
-                            y: {
-                                ticks: {
-                                    color: 'white',
-                                },
-                                grid: {
-                                    color: 'rgba(255, 255, 255, 0.1)',
-                                },
-                            },
-                        },
                         plugins: {
                             legend: {
                                 labels: {
