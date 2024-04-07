@@ -61,7 +61,9 @@
     -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
     
 }
+
 .div2 { 
+    position: relative;
     background-color: #30475E;
     grid-area: 2 / 1 / 3 / 2; 
     border-radius: 30px;
@@ -71,6 +73,7 @@
     -moz-box-shadow: 13px 2px 56px -1px rgba(97, 97, 97, 0.37);
 }
 .div3 {
+    position: relative;
     background-color: #30475E;
     grid-area: 1 / 2 / 3 / 3; 
     border-radius: 30px;
@@ -191,14 +194,38 @@
 }
 
 .btn-container{
+    margin-left: 340px;
+    width: 17%;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    background-color: #ECECEC;
 }
 
-.btn-1{
-    width: 200px;
-}
+.custom-loader {
+    width:55px;
+    height:30px;
+    display:grid;
+   
+  }
+  .custom-loader:before,
+  .custom-loader:after {
+    content: "";
+    grid-area: 1/1;
+    background: #C1A57B;
+    clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+    animation: a4 .5s infinite alternate;
+  }
+  
+  .custom-loader:after {
+    --s:-1;
+  }
+  @keyframes a4 {
+    0%  {transform: scale(var(--s,1)) translate(12px,-6px) translate(4px)}
+    100%{transform: scale(var(--s,1)) translate(12px,-6px) translate(-4px)}
+  }
 
 .PieChart{
     display: flex;
@@ -253,5 +280,48 @@
     }
 }
 
-
+.ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+.ribbon span {
+    font-family: "Lora", serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#C1A57B 0%, #C1A57B 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+}
+.ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #C1A57B;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #C1A57B;
+}
+.ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #C1A57B;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #C1A57B;
+}
 

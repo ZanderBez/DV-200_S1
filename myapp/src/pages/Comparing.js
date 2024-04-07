@@ -117,7 +117,7 @@ const Comparing = () => {
           </div>
             <div className='title-city1'>
               <h2>{city1.name}</h2>
-              <h5>Weather report for today</h5>
+              <h5>Weather report for today:</h5>
             </div>
             <div className='climate-info'>
             <h2>{data1.list[0].weather[0].main}</h2>

@@ -20,7 +20,7 @@ const TimeChart = (data) => {
 
                 if (lastLoggedDay !== currentDay) {
                     labels.push(currentDate.toDateString()); 
-                    temperatures.push(item.main.temp - 273.15); 
+                    temperatures.push(item.main.temp - 273.15);
                     lastLoggedDay = currentDay; 
                 }
             });
@@ -39,8 +39,8 @@ const TimeChart = (data) => {
                         {
                             label: 'Temperature °C',
                             data: newTemp,
-                            backgroundColor: 'white',
                             borderColor: 'rgb(193, 165, 123)',
+                            backgroundColor:"white",
                             tension: '0.4'
                         }
                     ]

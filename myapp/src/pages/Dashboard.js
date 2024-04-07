@@ -6,7 +6,7 @@ import { FaWind } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
 import { FaCloud } from "react-icons/fa";
 import Button from 'react-bootstrap/Button';
-import PieChart from '../Components/PieChart';
+import DoughnutChart from '../Components/DoughnutChart';
 import axios from 'axios';
 import BarChart from '../Components/LineChart';
 
@@ -95,11 +95,12 @@ const Dashboard = () => {
               </div>
               <div className='btn-container'>
                 <Link to="/comparing">
-                  <Button className='btn-1'>COMPARE</Button>{' '}
+                  <div className='custom-loader'></div>{' '}
                 </Link>
               </div>
             </div>
             <div className="div2">
+            <div class="ribbon"><span>Most View</span></div>
               <h5 className='chart-info'>Temperature For {data.city.name}</h5>
               <div className='LineChart'>
                 <BarChart data={data} />
@@ -138,7 +139,7 @@ const Dashboard = () => {
               </div>
               <h5 className='chart-info'>Weather Report in {data.city.name}:</h5>
               <div className='PieChart'>
-                <PieChart data={data}/>
+                <DoughnutChart data={data}/>
               </div>
             </div>
           </div>
