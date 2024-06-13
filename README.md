@@ -16,7 +16,7 @@
 
 ## About The Project
 
-Discover accurate weather forecasts anytime, anywhere with Weather Tracker. Our user-friendly platform and reliable API keep you informed and prepared for any weather condition. Plan your day confidently with Weather Tracker's detailed forecasts and convenient access on all devices. Say goodbye to surprises and hello to a more organized approach to your day. Visit our website now for reliable weather information
+Discover accurate weather forecasts anytime, anywhere with Weather Tracker. Our user-friendly platform and reliable API keep you informed and prepared for any weather condition. Plan your day confidently with Weather Tracker's detailed forecasts and convenient access on all devices. Say goodbye to surprises and hello to a more organized approach to your day. Visit our website now for reliable weather information.
 
 ### Home
 
@@ -73,6 +73,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 
 ## Demo Recording 
-
-very gooood
+[Demo video of the website](https://drive.google.com/file/d/1EmCmB2ua6oFCjt_ATFqwIO114lrD4F0Y/view?usp=sharing)
 
