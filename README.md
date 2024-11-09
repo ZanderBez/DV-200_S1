@@ -100,7 +100,7 @@ Ensure you have Node.js installed. Download it from [Node.js](https://nodejs.org
    ```
 2. Navigate to the project directory:
    ```sh
-   cd DV-200_S1
+   cd myapp
    ```
 3. Install dependencies:
    ```sh
