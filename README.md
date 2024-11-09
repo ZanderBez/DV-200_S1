@@ -1,4 +1,3 @@
-<!-- Repository Information & Links-->
 <br />
 
 <p align="center">
@@ -8,7 +7,7 @@
   <img src="https://img.shields.io/github/languages/code-size/ZanderBez/DV-200_S1?color=%000000" alt="GitHub code size in bytes">
 </p>
 
-<!-- HEADER SECTION -->
+
 <h5 align="center" style="padding:0;margin:0;">Zander Bezuidenhout</h5>
 <h5 align="center" style="padding:0;margin:0;">Student Number: 221205</h5>
 <h6 align="center">DV 200</h6>
@@ -36,7 +35,7 @@
     <a href="https://github.com/ZanderBez/DV-200_S1/issues">Request Feature</a>
 </p>
 
-<!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)
@@ -65,9 +64,9 @@
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
-<!--PROJECT DESCRIPTION-->
+
 ## About the Project
-<!-- header image of project -->
+
 ![image1](/Assets/Weather%20tracker%20mock%20Ups.png)
 
 ### Project Description
@@ -83,7 +82,7 @@ Weather Tracker is a comprehensive application designed to deliver accurate and 
 [![OpenWeather API](https://img.shields.io/badge/OpenWeather%20API-FF8000?style=for-the-badge&logo=OpenWeather&logoColor=white)](https://openweathermap.org/)
 
 
-<!-- GETTING STARTED -->
+
 ## Getting Started
 
 The following instructions will guide you through setting up your local copy of the project for development and testing purposes.
@@ -127,7 +126,7 @@ Ensure you have Node.js installed. Download it from [Node.js](https://nodejs.org
 - View weather trends over time with interactive graphs.
 ![image4](/Assets/Timeline.png)
 
-<!-- CONCEPT PROCESS -->
+
 ## Concept Process
 
 The conceptual process involved thorough research and planning to provide an intuitive weather tracking experience.
@@ -147,7 +146,7 @@ Initial brainstorming led to defining core features for real-time weather update
 Defined user paths for seamless navigation through dashboard, comparison, and timeline features.
 ![image8](/Assets/User%20Flow.png)
 
-<!-- DEVELOPMENT PROCESS -->
+
 ## Development Process
 
 ### Implementation Process
@@ -169,7 +168,7 @@ Defined user paths for seamless navigation through dashboard, comparison, and ti
 * Add predictive weather analysis.
 * Implement user account management for personalized experiences.
 
-<!-- MOCKUPS -->
+
 ## Final Outcome
 
 ### Mockups
@@ -179,12 +178,12 @@ Defined user paths for seamless navigation through dashboard, comparison, and ti
 
 [View Demonstration](https://drive.google.com/file/d/1EmCmB2ua6oFCjt_ATFqwIO114lrD4F0Y/view?usp=sharing)
 
-<!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/ZanderBez/DV-200_S1/issues) for a list of proposed features and known issues.
 
-<!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open-source community so inspiring. Any contributions are **greatly appreciated**.
@@ -195,23 +194,22 @@ Contributions are what make the open-source community so inspiring. Any contribu
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<!-- AUTHORS -->
+
 ## Authors
 
 * **Zander Bezuidenhout** - [ZanderBez](https://github.com/ZanderBez)
 
-<!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-<!-- CONTACT -->
 ## Contact
 
 * **Zander Bezuidenhout** - [bezuidenhoutzander8@gmail.com](mailto:bezuidenhoutzander8@gmail.com)
 * **Project Link** - [Weather Tracker](https://github.com/ZanderBez/DV-200_S1)
 
-<!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
 
 * [Chart.js](https://www.chartjs.org/)
