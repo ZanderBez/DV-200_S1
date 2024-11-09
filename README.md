@@ -76,11 +76,12 @@ Weather Tracker is a comprehensive application designed to deliver accurate and 
 
 ### Built With
 
-* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [React](https://react.dev/)
-* [Chart.js](https://www.chartjs.org/)
-* [Bootstrap](https://getbootstrap.com/)
-* [OpenWeather API](https://openweathermap.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![React](https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![OpenWeather API](https://img.shields.io/badge/OpenWeather%20API-FF8000?style=for-the-badge&logo=OpenWeather&logoColor=white)](https://openweathermap.org/)
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
